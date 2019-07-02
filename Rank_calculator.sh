@@ -1,13 +1,13 @@
 #AUTHOR ---> VISHAL_RAJ
 COMPUTE_RANK(){
-__DIVISION=$1
+__FILENAME=$1
+__DIVISION=$2
 
 if [[ -z $__DIVISION ]]; then
-     echo -e "Wrong input \n Try again     Syntax ------> COMPUTE_RANK <argument>"
+     echo -e "Wrong input \n Try again     Syntax ------> COMPUTE_RANK <file_path> <argument>"
      exit 1;
 fi
 
-__FILENAME=Cumulative_Marks_sheet.csv
 __TOTAL_LINE_COUNT=`awk 'END{print NR}' $__FILENAME`
 
 for ((c=2;c<=$__TOTAL_LINE_COUNT;c++))
