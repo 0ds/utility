@@ -20,8 +20,10 @@ do
             echo -e "$__STUDENT_NAME \t----->\t DISTINCTION"
         elif [ $__AVG -ge "60" ] && [ $__AVG -lt "80" ] && [ $__DIVISION = "FIRST" ]; then
             echo -e "$__STUDENT_NAME \t----->\t FIRST_DIVISION"
-        elif [ $__AVG -ge "30" ] && [ $__AVG -lt "60" ] && [ $__DIVISION = "SECOND" ]; then
+        elif [ $__AVG -ge "40" ] && [ $__AVG -lt "60" ] && [ $__DIVISION = "SECOND" ]; then
             echo -e "$__STUDENT_NAME \t----->\t SECOND_DIVISION"
+        elif [ $__AVG -ge "30" ] && [ $__AVG -lt "40" ] && [ $__DIVISION = "THIRD" ]; then
+            echo -e "$__STUDENT_NAME \t----->\t THIRD_DIVISION"
         elif [ $__AVG -lt "30" ] && [ $__DIVISION = "FAIL" ]; then
             echo -e "$__STUDENT_NAME \t----->\t FAIL"
         fi
